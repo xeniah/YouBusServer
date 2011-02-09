@@ -1,0 +1,16 @@
+<%= form_for @stop do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :stop_name %><br />
+    <%= f.text_field :stop_name %>
+  </p>
+  <p>
+    <%= f.label :stop_long %><br />
+    <%= f.text_field :stop_long %>
+  </p>
+  <p>
+    <%= f.label :stop_lat %><br />
+    <%= f.text_field :stop_lat %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

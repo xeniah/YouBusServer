@@ -1,0 +1,24 @@
+<% title "Checkins" %>
+
+<p>
+  <strong>Route:</strong>
+  <%= @checkins.route_id %>
+</p>
+<p>
+  <strong>Reported Lat:</strong>
+  <%= @checkins.reported_lat %>
+</p>
+<p>
+  <strong>Reported Long:</strong>
+  <%= @checkins.reported_long %>
+</p>
+<p>
+  <strong>Reported Datetime:</strong>
+  <%= @checkins.reported_datetime %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_checkins_path(@checkins) %> |
+  <%= link_to "Destroy", @checkins, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", checkins_path %>
+</p>

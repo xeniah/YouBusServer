@@ -1,0 +1,24 @@
+<%= form_for @schedule do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :route_id %><br />
+    <%= f.text_field :route_id %>
+  </p>
+  <p>
+    <%= f.label :trip_id %><br />
+    <%= f.text_field :trip_id %>
+  </p>
+  <p>
+    <%= f.label :stop_sequence %><br />
+    <%= f.text_field :stop_sequence %>
+  </p>
+  <p>
+    <%= f.label :stop_id %><br />
+    <%= f.text_field :stop_id %>
+  </p>
+  <p>
+    <%= f.label :arrival_time %><br />
+    <%= f.time_select :arrival_time %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

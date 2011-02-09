@@ -1,0 +1,23 @@
+<% title "Checkins" %>
+
+<table>
+  <tr>
+    <th>Route</th>
+    <th>Reported Lat</th>
+    <th>Reported Long</th>
+    <th>Reported Datetime</th>
+  </tr>
+  <% for checkins in @checkins %>
+    <tr>
+      <td><%= checkins.route_id %></td>
+      <td><%= checkins.reported_lat %></td>
+      <td><%= checkins.reported_long %></td>
+      <td><%= checkins.reported_datetime %></td>
+      <td><%= link_to "Show", checkins %></td>
+      <td><%= link_to "Edit", edit_checkins_path(checkins) %></td>
+      <td><%= link_to "Destroy", checkins, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Checkins", new_checkins_path(checkins) %></p>

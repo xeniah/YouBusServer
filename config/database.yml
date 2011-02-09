@@ -1,0 +1,46 @@
+# MySQL.  Versions 4.1 and 5.0 are recommended.
+#
+#rails g nifty:scaffold route route_name:string route_direction:string
+#rails g nifty:scaffold stop stop_name:string stop_long:float stop_lat:float
+#rails g nifty:scaffold schedule route_id:integer trip_id:integer stop_sequence:integer stop_id:integer arrival_time:time
+#rails g nifty:scaffold checkin route_id:integer reported_lat:float reported_long:float reported_datetime:datetime
+#rails g nifty:scaffold trips block_id:string, route_id:integer, direction_id:integer, trip_headsign:string, trip_id:string, trip_short_name:string
+#rails g nifty:scaffold stop_times trip_id:string, arrival_time:datetime , stop_id:integer ,stop_sequence:integer
+
+# Install the MySQL driver:
+#   gem install mysql2
+#
+# And be sure to use new-style password hashing:
+#   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
+development:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: YouBusServer_development
+  pool: 5
+  username: root
+  password:
+  socket: /tmp/mysql.sock
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: YouBusServer_test
+  pool: 5
+  username: root
+  password:
+  socket: /tmp/mysql.sock
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: YouBusServer_production
+  pool: 5
+  username: root
+  password:
+  socket: /tmp/mysql.sock

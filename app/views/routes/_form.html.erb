@@ -1,0 +1,12 @@
+<%= form_for @route do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :route_name %><br />
+    <%= f.text_field :route_name %>
+  </p>
+  <p>
+    <%= f.label :route_direction %><br />
+    <%= f.text_field :route_direction %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

@@ -1,0 +1,9 @@
+one:
+  stop_name: MyString
+  stop_long: 1.5
+  stop_lat: 1.5
+
+two:
+  stop_name: MyString
+  stop_long: 1.5
+  stop_lat: 1.5

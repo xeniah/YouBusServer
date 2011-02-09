@@ -1,0 +1,28 @@
+<% title "Schedule" %>
+
+<p>
+  <strong>Route:</strong>
+  <%= @schedule.route_id %>
+</p>
+<p>
+  <strong>Trip:</strong>
+  <%= @schedule.trip_id %>
+</p>
+<p>
+  <strong>Stop Sequence:</strong>
+  <%= @schedule.stop_sequence %>
+</p>
+<p>
+  <strong>Stop:</strong>
+  <%= @schedule.stop_id %>
+</p>
+<p>
+  <strong>Arrival Time:</strong>
+  <%= @schedule.arrival_time %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_schedule_path(@schedule) %> |
+  <%= link_to "Destroy", @schedule, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", schedules_path %>
+</p>

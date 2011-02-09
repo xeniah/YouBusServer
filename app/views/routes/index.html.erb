@@ -1,0 +1,19 @@
+<% title "Routes" %>
+
+<table>
+  <tr>
+    <th>Route Name</th>
+    <th>Route Direction</th>
+  </tr>
+  <% for route in @routes %>
+    <tr>
+      <td><%= route.route_name %></td>
+      <td><%= route.route_direction %></td>
+      <td><%= link_to "Show", route %></td>
+      <td><%= link_to "Edit", edit_route_path(route) %></td>
+      <td><%= link_to "Destroy", route, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Route", new_route_path(route) %></p>

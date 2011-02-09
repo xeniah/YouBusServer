@@ -1,0 +1,20 @@
+<% title "Stop" %>
+
+<p>
+  <strong>Stop Name:</strong>
+  <%= @stop.stop_name %>
+</p>
+<p>
+  <strong>Stop Long:</strong>
+  <%= @stop.stop_long %>
+</p>
+<p>
+  <strong>Stop Lat:</strong>
+  <%= @stop.stop_lat %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_stop_path(@stop) %> |
+  <%= link_to "Destroy", @stop, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", stops_path %>
+</p>

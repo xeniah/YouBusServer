@@ -1,0 +1,13 @@
+one:
+  route_id: 1
+  trip_id: 1
+  stop_sequence: 1
+  stop_id: 1
+  arrival_time: 2011-02-05 18:11:18
+
+two:
+  route_id: 1
+  trip_id: 1
+  stop_sequence: 1
+  stop_id: 1
+  arrival_time: 2011-02-05 18:11:18

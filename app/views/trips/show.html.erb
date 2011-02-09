@@ -1,0 +1,32 @@
+<% title "Trips" %>
+
+<p>
+  <strong>Block:</strong>
+  <%= @trips.block_id %>
+</p>
+<p>
+  <strong>Route:</strong>
+  <%= @trips.route_id %>
+</p>
+<p>
+  <strong>Direction:</strong>
+  <%= @trips.direction_id %>
+</p>
+<p>
+  <strong>Trip Headsign:</strong>
+  <%= @trips.trip_headsign %>
+</p>
+<p>
+  <strong>Trip:</strong>
+  <%= @trips.trip_id %>
+</p>
+<p>
+  <strong>Trip Short Name:</strong>
+  <%= @trips.trip_short_name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_trips_path(@trips) %> |
+  <%= link_to "Destroy", @trips, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", trips_path %>
+</p>

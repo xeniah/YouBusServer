@@ -1,0 +1,11 @@
+one:
+  route_id: 1
+  reported_lat: 1.5
+  reported_long: 1.5
+  reported_datetime: 2011-02-05 18:13:17
+
+two:
+  route_id: 1
+  reported_lat: 1.5
+  reported_long: 1.5
+  reported_datetime: 2011-02-05 18:13:17

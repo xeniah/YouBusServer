@@ -1,0 +1,20 @@
+<%= form_for @checkins do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :route_id %><br />
+    <%= f.text_field :route_id %>
+  </p>
+  <p>
+    <%= f.label :reported_lat %><br />
+    <%= f.text_field :reported_lat %>
+  </p>
+  <p>
+    <%= f.label :reported_long %><br />
+    <%= f.text_field :reported_long %>
+  </p>
+  <p>
+    <%= f.label :reported_datetime %><br />
+    <%= f.datetime_select :reported_datetime %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

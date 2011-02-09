@@ -1,0 +1,16 @@
+<% title "Route" %>
+
+<p>
+  <strong>Route Name:</strong>
+  <%= @route.route_name %>
+</p>
+<p>
+  <strong>Route Direction:</strong>
+  <%= @route.route_direction %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_route_path(@route) %> |
+  <%= link_to "Destroy", @route, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", routes_path %>
+</p>

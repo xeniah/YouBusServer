@@ -1,0 +1,28 @@
+<%= form_for @trips do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :block_id %><br />
+    <%= f.text_field :block_id %>
+  </p>
+  <p>
+    <%= f.label :route_id %><br />
+    <%= f.text_field :route_id %>
+  </p>
+  <p>
+    <%= f.label :direction_id %><br />
+    <%= f.text_field :direction_id %>
+  </p>
+  <p>
+    <%= f.label :trip_headsign %><br />
+    <%= f.text_field :trip_headsign %>
+  </p>
+  <p>
+    <%= f.label :trip_id %><br />
+    <%= f.text_field :trip_id %>
+  </p>
+  <p>
+    <%= f.label :trip_short_name %><br />
+    <%= f.text_field :trip_short_name %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
