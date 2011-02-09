@@ -23,8 +23,10 @@ ActiveRecord::Schema.define(:version => 20110206210339) do
 
   create_table "routes", :force => true do |t|
     t.integer  "route_id"
+    t.integer  "trip_id"
     t.string   "route_name"
     t.string   "route_direction"
+    t.string   "trip_short_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
