@@ -2,7 +2,7 @@ class CreateSchedules < ActiveRecord::Migration
   def self.up
     create_table :schedules do |t|
       t.integer :route_id
-      t.integer :trip_id
+      t.string :trip_id
       t.integer :stop_sequence
       t.integer :stop_id
       t.time :arrival_time
