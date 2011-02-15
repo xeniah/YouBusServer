@@ -1,8 +1,9 @@
 YouBusServer::Application.routes.draw do
   
  # match ':controller/:action'
-  match 'stops/get_nearest/:long/:lat'=> 'stops#get_nearest'
-  
+
+ match 'stops/get_nearest/:long/:lat/:radius/:offset/:limit'=> 'stops#get_nearest', :constraints => {:long => /[-+]?[0-9]*\.?[0-9]+/, :lat => /[-+]?[0-9]*\.?[0-9]+/ }
+ 
  resources :trips
 
  resources :checkins

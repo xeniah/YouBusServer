@@ -6,10 +6,15 @@ gem 'mocha'
 gem 'capistrano'
 gem 'taps'
 
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
+#gem 'mysql2'
+gem 'pg'
+gem 'geokit'
+gem 'geokit-rails3'
+
 
 # Use unicorn as the web server
 # gem 'unicorn'

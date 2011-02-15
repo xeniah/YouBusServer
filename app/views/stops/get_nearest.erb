@@ -9,3 +9,24 @@
   <%= @lat %>
 </p>
 
+<% for stop in @stops %>
+    <p>
+      <td><%= stop.stop_name %></td>
+      <td><%= stop.stop_long %></td>
+      <td><%= stop.stop_lat %></td>
+      <td><%= link_to "Show", stop %></td>
+      <td><%= link_to "Edit", edit_stop_path(stop) %></td>
+      <td><%= link_to "Destroy", stop, :confirm => 'Are you sure?', :method => :delete %></td>
+    </p>
+
+     <% for route in @routes %>
+    <p>
+      <p>
+      <%= route.route_name %>
+      <%= route.route_direction %>
+      </p>  
+    </p>
+  <% end %>
+  <% end %>
+
+

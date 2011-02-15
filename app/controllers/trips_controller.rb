@@ -1,6 +1,6 @@
 class TripsController < ApplicationController
   def index
-    @trips = Trips.all
+    @trips = Trips.all(:limit=>30)
   end
 
   def show

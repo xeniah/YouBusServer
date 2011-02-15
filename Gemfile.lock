@@ -38,6 +38,10 @@ GEM
       net-ssh-gateway (>= 1.0.0)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    geokit (1.5.0)
+    geokit-rails3 (0.1.2)
+      geokit (~> 1.5.0)
+      rails (~> 3.0.0)
     highline (1.6.1)
     i18n (0.5.0)
     json (1.4.6)
@@ -49,7 +53,6 @@ GEM
     mime-types (1.16)
     mocha (0.9.11)
       rake
-    mysql2 (0.2.6)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-sftp (2.0.5)
@@ -58,6 +61,7 @@ GEM
     net-ssh-gateway (1.0.1)
       net-ssh (>= 1.99.1)
     nifty-generators (0.4.4)
+    pg (0.10.1)
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.13)
@@ -103,8 +107,10 @@ PLATFORMS
 
 DEPENDENCIES
   capistrano
+  geokit
+  geokit-rails3
   mocha
-  mysql2
   nifty-generators
+  pg
   rails (= 3.0.3)
   taps
