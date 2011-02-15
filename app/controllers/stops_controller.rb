@@ -67,7 +67,7 @@ class StopsController < ApplicationController
     #    }
     # 
     #    @routes;
-    @stops = Stop.geo_scope(:origin =>[47.7193756, -122.3004], :within=>radius).offset(offset).limit(limit);
+    @stops = Stop.geo_scope(:origin =>[lat, long], :within=>radius).offset(offset).limit(limit);
     render :index;
   end
 end
