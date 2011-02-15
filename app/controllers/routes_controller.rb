@@ -42,5 +42,12 @@ class RoutesController < ApplicationController
     redirect_to routes_url
   end
   
+  def get_routes_by_stop_id
+    stop_id=params[:stop_id]
+    @routes = Route.find_by_sql("select distinct routes.id, routes.route_id, route_name, route_direction, routes.created_at, routes.updated_at
+    from schedules, trips, routes where trips.route_id=routes.route_id and schedules.trip_id=trips.trip_id and stop_id=#{stop_id}");
+    
+    
+  end
   
 end

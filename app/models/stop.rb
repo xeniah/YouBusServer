@@ -6,4 +6,5 @@ class Stop < ActiveRecord::Base
                        :lng_column_name => :stop_long
     
     attr_accessible :id, :stop_name, :stop_long, :stop_lat, :stop_id
+    belongs_to :schedule
 end
