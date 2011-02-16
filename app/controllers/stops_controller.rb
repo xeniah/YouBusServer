@@ -1,6 +1,10 @@
 class StopsController < ApplicationController
   def index
-    #@stops = Stop.all(:limit=>30)
+    @stops = Stop.all(:limit=>30);
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @stops}
+    end
     #@stops = Stop.geo_scope(:origin =>[47.7193756, -122.3004], :within=>20).offset(10).limit(10);    
   end
 
@@ -52,6 +56,10 @@ class StopsController < ApplicationController
     
     @stops = Stop.geo_scope(:origin =>[long, lat], :within=>radius).offset(offset).limit(limit);
     @routes = [];
+    respond_to do |format|
+       format.html # index.html.erb
+       format.xml  { render :xml => @stops}
+     end
     
   end
 end
