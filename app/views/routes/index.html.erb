@@ -7,6 +7,7 @@
   </tr>
   <% for route in @routes %>
     <tr>
+	  <td><%= route.bus_route_id %></td>
       <td><%= route.route_name %></td>
       <td><%= route.route_direction %></td>
       <td><%= link_to "Show", route %></td>

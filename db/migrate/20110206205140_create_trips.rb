@@ -1,6 +1,7 @@
 class CreateTrips < ActiveRecord::Migration
   def self.up
     create_table :trips do |t|
+      t.string :bus_trip_id
       t.string :trip_id
       t.string :block_id
       t.integer :route_id
