@@ -69,4 +69,18 @@ class RoutesController < ApplicationController
     
   end
   
+  def get_routes_by_stop_id_no_constraint
+      bus_stop_id=params[:bus_stop_id]
+      
+      @routes = Route.find_by_sql("select distinct routes.id, routes.bus_route_id, route_name, trips.trip_headsign
+      from schedules, trips, routes 
+      where trips.route_id=routes.route_id and schedules.trip_id=trips.trip_id 
+      and schedules.stop_id=#{bus_stop_id} AND trip_headsign <>''");
+
+      respond_to do |format|
+         format.html # index.html.erb
+         format.xml  { render :xml => @routes}
+      end    
+  end
+      
 end

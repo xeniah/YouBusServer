@@ -6,6 +6,8 @@ YouBusServer::Application.routes.draw do
  
  match 'routes/get_routes_by_stop_id/:bus_stop_id' =>'routes#get_routes_by_stop_id'
  
+ match 'routes/get_routes_by_stop_id_no_constraint/:bus_stop_id' =>'routes#get_routes_by_stop_id_no_constraint'
+ 
  resources :trips
 
  resources :checkins
