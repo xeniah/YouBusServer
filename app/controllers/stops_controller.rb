@@ -1,6 +1,6 @@
 class StopsController < ApplicationController
   def index
-    @stops = Stop.all(:limit=>30);
+    @stops = Stop.all;
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @stops}
