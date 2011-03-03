@@ -1,8 +1,6 @@
-<% title "Stops" %>
-
 <table>
   <tr>
-	<th>Stop Name</th>
+    <th>Stop Name</th>
     <th>Stop Long</th>
     <th>Stop Lat</th>
   </tr>
@@ -14,6 +12,7 @@
       <td><%= stop.stop_name %></td>
       <td><%= stop.stop_long %></td>
       <td><%= stop.stop_lat %></td>
+      <td>ROUTES:<%= stop.stop_routes %></td>
       <td><%= link_to "Show", stop %></td>
       <td><%= link_to "Edit", edit_stop_path(stop) %></td>
       <td><%= link_to "Destroy", stop, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -22,5 +21,3 @@
 </table>
 
 <p><%= link_to "New Stop", new_stop_path(stop) %></p>
-
-

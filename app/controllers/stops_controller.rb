@@ -54,7 +54,7 @@ class StopsController < ApplicationController
     limit=params[:limit];
     radius = params[:radius];
     
-    @stops = Stop.geo_scope(:origin =>[long, lat], :within=>radius).offset(offset).limit(limit);
+    @stops = Stop.geo_scope(:origin =>[long, lat], :within=>radius).offset(offset).limit(limit).sort_by_distance_from([long, lat]);
     @routes = [];
     respond_to do |format|
        format.html # index.html.erb

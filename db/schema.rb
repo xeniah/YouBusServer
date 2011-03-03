@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110206210339) do
+ActiveRecord::Schema.define(:version => 20110224191512) do
 
   create_table "checkins", :force => true do |t|
     t.integer  "route_id"
@@ -23,22 +23,21 @@ ActiveRecord::Schema.define(:version => 20110206210339) do
 
   create_table "routes", :force => true do |t|
     t.integer  "route_id"
-    t.integer  "trip_id"
     t.string   "route_name"
     t.string   "route_direction"
-    t.string   "trip_short_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "bus_route_id"
   end
 
   create_table "schedules", :force => true do |t|
     t.integer  "route_id"
-    t.integer  "trip_id"
     t.integer  "stop_sequence"
     t.integer  "stop_id"
     t.time     "arrival_time"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "trip_id",       :limit => nil
   end
 
   create_table "stop_times", :force => true do |t|
@@ -51,23 +50,25 @@ ActiveRecord::Schema.define(:version => 20110206210339) do
   end
 
   create_table "stops", :force => true do |t|
-    t.integer  "stop_id"
     t.string   "stop_name"
     t.float    "stop_long"
     t.float    "stop_lat"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "bus_stop_id"
+    t.string   "stop_routes"
   end
 
   create_table "trips", :force => true do |t|
-    t.string   "trip_id"
     t.string   "block_id"
     t.integer  "route_id"
     t.integer  "direction_id"
     t.string   "trip_headsign"
+    t.string   "trip_id"
     t.string   "trip_short_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "bus_trip_id"
   end
 
 end
