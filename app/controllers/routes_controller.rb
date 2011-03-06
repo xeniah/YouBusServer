@@ -70,7 +70,7 @@ class RoutesController < ApplicationController
     @routes = Route.find_by_sql("select distinct route_name, routes.id, routes.bus_route_id, schedules.arrival_time, route_name, trips.trip_headsign 
           from schedules, trips, routes 
           where trips.route_id=routes.route_id and schedules.trip_id=trips.trip_id and 
-          schedules.stop_id=#{bus_stop_id} AND trip_headsign <>'' and arrival_time >= (now()::time - interval '8 hours')  and arrival_time <= (now()::time - interval '7 hours 30 minutes')
+          schedules.stop_id=#{bus_stop_id} AND trip_headsign <>'' and arrival_time >= (now()::time - interval '12 hours')  and arrival_time <= (now()::time - interval '11 hours 30 minutes')
           order by route_name, arrival_time");
     #comment below out for live ...
     # @routes = Route.find_by_sql("select distinct routes.id, routes.bus_route_id, schedules.arrival_time, route_name, trips.trip_headsign 
@@ -94,7 +94,7 @@ class RoutesController < ApplicationController
     @routes = Route.find_by_sql("select distinct route_name, routes.id, routes.bus_route_id, schedules.arrival_time, route_name, trips.trip_headsign
     from schedules, trips, routes 
     where trips.route_id=routes.route_id and routes.bus_route_id=#{bus_route_id} and schedules.trip_id=trips.trip_id and 
-    schedules.stop_id=#{bus_stop_id} AND trip_headsign <>'' and arrival_time >= (now()::time - interval '8 hours')  and arrival_time <= (now()::time - interval '7 hours 30 minutes')
+    schedules.stop_id=#{bus_stop_id} AND trip_headsign <>'' and arrival_time >= (now()::time - interval '12 hours')  and arrival_time <= (now()::time - interval '11 hours 30 minutes')
     order by route_name, arrival_time");
     
     respond_to do |format|
